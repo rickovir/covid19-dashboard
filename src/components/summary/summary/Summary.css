@@ -1,0 +1,31 @@
+.summary {
+    background-color: var(--grey2);
+    border: 1px solid var(--grey1);
+}
+
+.summary h4{
+    font-weight: bold;
+}
+
+.summary .date{
+    font-size: 14px;
+}
+
+.couter {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.couter h4 {
+    font-weight: 500;
+}
+
+.couter p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.chart-summary{
+    height: 230px;
+}

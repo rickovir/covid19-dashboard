@@ -1,0 +1,26 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --black: #0b0c0c;
+    --blue: #1d70b8;
+    --soft-blue: #5694ca;
+    --grey1:#f3f2f1;
+    --grey2:#f8f8f8;
+}
+
+header {
+    background-color: var(--black);
+    border-bottom: 10px solid var(--blue);
+}
+
+header .header-logo {
+    padding: 10px 0;
+}
+
+header .header-logo h1 {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0;
+}

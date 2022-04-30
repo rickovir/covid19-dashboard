@@ -1,0 +1,27 @@
+.vaccination-summary-wrapper {
+    background-color: var(--grey2);
+    border: 1px solid var(--grey1);
+}
+
+.topic h4{
+    font-weight: bold;
+}
+
+.topic .date{
+    font-size: 14px;
+}
+
+.doses p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.doses-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.chart {
+    height: 230px;
+}

@@ -1,0 +1,23 @@
+nav.covid-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.covid-menu ul li a {
+    display: block;
+    color: var(--blue);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+}
+
+nav.covid-menu ul li a.active {
+    background-color: var(--grey1);
+    font-weight: 700;
+    border-left: 4px solid var(--blue);
+}
+
+nav.covid-menu ul li a:hover:not(.active) {
+    border-left: 4px solid var(--soft-blue);
+}
