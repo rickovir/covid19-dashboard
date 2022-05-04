@@ -10,7 +10,7 @@ import './home.css';
 
 interface Props {
     loadData: typeof loadAllData;
-    update: UpdateState;
+    update: any;
 }
 
 
