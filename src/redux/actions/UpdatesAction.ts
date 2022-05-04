@@ -6,6 +6,8 @@ export const loadAllData = () => async (dispatch: Dispatch<UpdateAction>) => {
     try {
         const {data, update} = ( await axios.get('update') )?.data as any;
 
+        console.log(data)
+
         dispatch({
             type: UpdateActionType.SET_OVERALL_UPDATE,
             payload: { data, update } 

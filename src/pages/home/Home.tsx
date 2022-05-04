@@ -10,6 +10,7 @@ import './home.css';
 
 interface Props {
     loadData: typeof loadAllData;
+    update: UpdateState;
 }
 
 
@@ -29,6 +30,9 @@ class Home extends Component<Props>{
 
             <VaccinationSummary />
             <Summary />
+            <pre>
+                { this.props.update }
+            </pre>
         </section>
     );
 }
@@ -42,5 +46,11 @@ const mapDispatchToProps = (dispatch: Dispatch<UpdateAction>) => {
         dispatch),   
     }
 };
+
+const mapStateToProps = (state: RootState) => {
+    return {
+        update : state.update
+    }
+}
 
 export default connect(null, mapDispatchToProps)(Home);
