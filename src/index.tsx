@@ -11,9 +11,9 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store/Store';
 
 axios.defaults.timeout = 30000;
-axios.defaults.baseURL = 'https://data.covid19.go.id/public/api/';
-axios.defaults.headers.post['Content-Type'] = 'application/json';
-axios.defaults.headers.post['Accept'] = '*/*';
+axios.defaults.baseURL = 'https://verdant-shortbread-366325.netlify.app/.netlify/functions/api/';
+// axios.defaults.headers.post['Content-Type'] = 'application/json';
+// axios.defaults.headers.post['Accept'] = '*/*';
 
 ReactDOM.render(
   <Provider store={store}>
