@@ -6,13 +6,12 @@ import VaccinationSummary from "../../components/summary/vaccination-summary/Vac
 import { loadAllData } from "../../redux/actions/UpdatesAction";
 import { RootState } from "../../redux/store/Store";
 import { UpdateAction } from "../../redux/types/UpdatesType";
+import { UpdateState } from '../../redux/reducers/UpdatesReducer';
 import './home.css';
 
 interface Props {
     loadData: typeof loadAllData;
-    update: any;
-}
-
+};
 
 class Home extends Component<Props>{
     constructor(props: any) {
@@ -30,9 +29,6 @@ class Home extends Component<Props>{
 
             <VaccinationSummary />
             <Summary />
-            <pre>
-                { this.props.update }
-            </pre>
         </section>
     );
 }
@@ -46,11 +42,5 @@ const mapDispatchToProps = (dispatch: Dispatch<UpdateAction>) => {
         dispatch),   
     }
 };
-
-const mapStateToProps = (state: RootState) => {
-    return {
-        update : state.update
-    }
-}
 
 export default connect(null, mapDispatchToProps)(Home);

@@ -1,13 +1,13 @@
 import { DailyUpdate, PositiveData, UpdateAction, UpdateActionType } from "../types/UpdatesType";
 
-interface UpdateState {
-    allData?: DailyUpdate | any;
+export interface UpdateState {
+    allData?: DailyUpdate;
     totalPositivePerweek?: number;
     positivePersixmonth?: Array<PositiveData> | Array<any>;
 };
 
 const initialState: UpdateState = {
-    allData: {},
+    allData: undefined,
     totalPositivePerweek: 0,
     positivePersixmonth: []
 };

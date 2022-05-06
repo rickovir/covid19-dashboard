@@ -1,7 +1,15 @@
 export interface DailyUpdate {
-    data: any;
+    data: DailyData;
     update: DailyUpdateDetail;
 };
+
+export interface DailyData {
+    id: number;
+    jumlah_odp: number;
+    jumlah_pdp: number;
+    total_spesimen: number;
+    total_spesimen_negatif: number;
+}
 
 export interface DailyUpdateDetail {
     penambahan: Penambahan;
