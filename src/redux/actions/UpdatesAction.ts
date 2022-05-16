@@ -42,17 +42,20 @@ const countTotalPositivePerWeek = ( dailyData: Array<Harian> ) => {
 
 const mapPositivePerSixMonth = ( dailyData: Array<Harian> ) => {
     const activatedDate = new Date(dailyData[0].key);
-    let activatedMonth = activatedDate.getMonth();
     
     let positiveRes: Array<PositiveData> = [];
     let totalPositive = 0;
     let ittrNum = 1;
     for(const itemDaily of dailyData) {
+        let tempDate = new Date(itemDaily.key);
+
         if (itemDaily.key === activatedDate.getTime()) {
             totalPositive = itemDaily.jumlah_positif.value + totalPositive;
+            tempDate.setDate(activatedDate.getDate() + 1);
 
-            if (activatedMonth !== activatedDate.getMonth()) {
-                activatedMonth = activatedDate.getMonth();
+            if (tempDate.getMonth() !== activatedDate.getMonth()) {
+                activatedDate.setMonth(activatedDate.getMonth());
+
                 positiveRes.push({
                     total: totalPositive,
                     cumulative: itemDaily.jumlah_positif_kum.value,
